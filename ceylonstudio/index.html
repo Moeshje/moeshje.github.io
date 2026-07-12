@@ -9,32 +9,237 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%;
-            background-color: #000000;
+            min-height: 100%;
+            background-image: url('../starpaper_50.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #ffffff;
         }
 
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 150px; 
-            height: auto;
+        .navbar {
+            padding: 20px;
+            display: flex;
+            justify-content: flex-start;
         }
 
-        .content {
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #d29a74;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #d29a74;
+            color: #000000;
+            box-shadow: 0 0 15px rgba(210, 154, 116, 0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 60px 20px;
+        }
+
+        .studio-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .studio-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #d29a74;
+            margin: 0 0 10px 0;
+        }
+
+        .studio-header p {
+            font-size: 1.2rem;
+            color: #aaaaaa;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .catalog-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product-card {
+            background: rgba(10, 10, 10, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            width: 350px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #d29a74;
+        }
+
+        .product-img-container {
+            width: 100%;
+            height: 240px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            position: relative;
+        }
+
+        .img-placeholder {
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px dashed rgba(210, 154, 116, 0.2);
+            padding: 20px 40px;
+            border-radius: 8px;
+        }
+
+        .product-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-content h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .product-description {
+            font-size: 0.95rem;
+            color: #cccccc;
+            line-height: 1.5;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+
+        .product-specs {
+            margin: 0 0 25px 0;
+            padding: 0;
+            list-style: none;
+            font-size: 0.9rem;
+            color: #aaaaaa;
+        }
+
+        .product-specs li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-specs li::before {
+            content: "▪";
+            color: #d29a74;
+            margin-right: 8px;
+        }
+
+        .action-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-details {
+            flex: 1;
             text-align: center;
+            padding: 12px 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-details:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #ffffff;
+        }
+
+        .btn-ebay {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(210, 154, 116, 0.1);
+            border: 1px solid #d29a74;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-ebay:hover {
+            background: #d29a74;
+            color: #000000;
+            box-shadow: 0 0 15px rgba(210, 154, 116, 0.4);
         }
     </style>
 </head>
 <body>
 
-    <img src="/ceylonstudio.png" alt="Ceylon Studio Logo" class="logo">
+    <div class="navbar">
+        <a href="/" class="back-btn">← Back</a>
+    </div>
+
+    <div class="container">
+        
+        <div class="studio-header">
+            <h1>Ceylon Studio</h1>
+            <p>High-performance hardware modules designed for modern computing architectures.</p>
+        </div>
+
+        <div class="catalog-grid">
+
+            <div class="product-card">
+                <div class="product-img-container">
+                    <div class="img-placeholder">Hardware Image</div>
+                </div>
+                <div class="product-content">
+                    <h2>RISC-V Module Alpha</h2>
+                    <p class="product-description">A compact, powerful RISC-V development hardware kit designed for low-power edge computing and next-gen prototyping.</p>
+                    
+                    <ul class="product-specs">
+                        <li>High-efficiency RISC-V Architecture</li>
+                        <li>Extensive I/O connectivity options</li>
+                        <li>Ultra-low power consumption matrix</li>
+                    </ul>
+
+                    <div class="action-container">
+                        <a href="/products/alpha-details" class="btn-details">Specs & Info</a>
+                        <a href="https://www.ebay.com" target="_blank" class="btn-ebay">Buy on eBay</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
