@@ -225,10 +225,91 @@
         font-weight: 700;
         font-style: normal;
         }
+
+        .navbar {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo-img {
+            height: 35px;
+            width: auto;
+        }
+        
+        .nav-github {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-github:hover {
+            background: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+        
+        body {
+            padding-top: 70px !important;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 12px 15px;
+            }
+            
+            .nav-logo-img {
+                height: 30px;
+            }
+            
+            .nav-github {
+                font-size: 0.9rem;
+                padding: 6px 14px;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="JOUW-LOGO-AFBEELDING.png" alt="Ceylon Studio" class="nav-logo-img">
+                </a>
+            <a href="www.github.com/Moeshje/moeshje.github.io" class="nav-github" target="_blank">GitHub</a>
+        </div>
+    </nav>
+    
     <div class="navbar">
         <a href="/" class="back-btn">← Back</a>
     </div>
