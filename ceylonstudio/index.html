@@ -9,315 +9,287 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            min-height: 100%;
-            background-image: url('pexels-pixabay-301669.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #ffffff;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        .navbar {
-            padding: 0;
-        }
-
-        .back-btn {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 1000;
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1rem;
-            color: #ffffff;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid #d29a74;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
-
-        .back-btn:hover {
-            background: #d29a74;
-            color: #000000;
-            box-shadow: 0 0 15px rgba(210, 154, 116, 0.5);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 20px 60px 20px;
-        }
-
-        .studio-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .studio-header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #d29a74;
-            margin: 0 0 10px 0;
-        }
-
-        .studio-header p {
-            font-size: 1.2rem;
-            color: #aaaaaa;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .catalog-grid {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .product-card {
-            background: rgba(10, 10, 10, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            width: 350px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: #d29a74;
-        }
-
-        .product-img-container {
-            width: 100%;
-            height: 240px;
-            background: rgba(255, 255, 255, 0.02);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .img-placeholder {
-            color: rgba(255, 255, 255, 0.2);
-            font-size: 1rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border: 1px dashed rgba(210, 154, 116, 0.2);
-            padding: 20px 40px;
-            border-radius: 8px;
-        }
-
-        .product-content {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .product-content h2 {
-            margin: 0 0 10px 0;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        .product-description {
-            font-size: 0.95rem;
-            color: #cccccc;
-            line-height: 1.5;
-            margin: 0 0 20px 0;
-            flex-grow: 1;
-        }
-
-        .product-specs {
-            margin: 0 0 25px 0;
-            padding: 0;
-            list-style: none;
-            font-size: 0.9rem;
-            color: #aaaaaa;
-        }
-
-        .product-specs li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-
-        .product-specs li::before {
-            content: "▪";
-            color: #d29a74;
-            margin-right: 8px;
-        }
-
-        .action-container {
-            display: flex;
-            gap: 15px;
-        }
-
-        .btn-details {
-            flex: 1;
-            text-align: center;
-            padding: 12px 0;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #ffffff;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-details:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: #ffffff;
-        }
-
-        .btn-ebay {
-            flex: 1;
-            text-align: center;
-            padding: 12px 0;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #ffffff;
-            text-decoration: none;
-            background: rgba(210, 154, 116, 0.1);
-            border: 1px solid #d29a74;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-ebay:hover {
-            background: #d29a74;
-            color: #000000;
-            box-shadow: 0 0 15px rgba(210, 154, 116, 0.4);
-        }
-        
-        .logo-container {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        }
-
-        .site-logo {
-        height: 50px;
-        width: auto;
-        display: block;
-        }
-
-        .studio-header h1 {
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-        }
-
-        .navbar {
+    html, body {
         width: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        min-height: 100%;
+        background-image: url('pexels-pixabay-301669.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #ffffff;
+    }
+
+    body {
+        padding-top: 100px !important;
+    }
+
+    .navbar {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.85);
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1000;
-        padding: 15px 40px;
-        }
+        z-index: 10000;
+    }
 
-        .nav-container {
+    .nav-container {
         width: 100%;
-        margin: 0;
-        padding: 0;
+        padding: 15px 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        }
-        
-        .nav-logo {
-            text-decoration: none;
-            color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
-            font-weight: 700;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .nav-logo-img {
-            height: 35px;
-            width: auto;
-        }
-        
-        .nav-github {
-            text-decoration: none;
-            color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 8px 18px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-github:hover {
-            background: #ffffff;
-            color: #000000;
-            border-color: #ffffff;
-        }
-        
+    }
+
+    .nav-logo {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nav-logo-img {
+        height: 32px;
+        width: auto;
+        display: block;
+    }
+
+    .nav-logo-text {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-github {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 8px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-github:hover {
+        background: #d29a74;
+        color: #000000;
+        border-color: #d29a74;
+        box-shadow: 0 0 15px rgba(210, 154, 116, 0.4);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 20px 60px 20px;
+    }
+
+    .studio-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .studio-header h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #d29a74;
+        margin: 0 0 10px 0;
+    }
+
+    .studio-header p {
+        font-size: 1.2rem;
+        color: #aaaaaa;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .catalog-grid {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-card {
+        background: rgba(10, 10, 10, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        max-width: 350px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        border-color: #d29a74;
+    }
+
+    .product-img-container {
+        width: 100%;
+        height: 240px;
+        background: rgba(255, 255, 255, 0.02);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .img-placeholder {
+        color: rgba(255, 255, 255, 0.2);
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px dashed rgba(210, 154, 116, 0.2);
+        padding: 20px 40px;
+        border-radius: 8px;
+    }
+
+    .product-content {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .product-content h2 {
+        margin: 0 0 10px 0;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .product-description {
+        font-size: 0.95rem;
+        color: #cccccc;
+        line-height: 1.5;
+        margin: 0 0 20px 0;
+        flex-grow: 1;
+    }
+
+    .product-specs {
+        margin: 0 0 25px 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0.9rem;
+        color: #aaaaaa;
+    }
+
+    .product-specs li {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .product-specs li::before {
+        content: "▪";
+        color: #d29a74;
+        margin-right: 8px;
+    }
+
+    .action-container {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn-details {
+        flex: 1;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #ffffff;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-details:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #ffffff;
+    }
+
+    .btn-ebay {
+        flex: 1;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #ffffff;
+        text-decoration: none;
+        background: rgba(210, 154, 116, 0.1);
+        border: 1px solid #d29a74;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-ebay:hover {
+        background: #d29a74;
+        color: #000000;
+        box-shadow: 0 0 15px rgba(210, 154, 116, 0.4);
+    }
+
+    @media (max-width: 768px) {
         body {
-            padding-top: 70px !important;
+            padding-top: 85px !important;
         }
-        
-        @media (max-width: 768px) {
-            .nav-container {
-                padding: 12px 15px;
-            }
-            
-            .nav-logo-img {
-                height: 30px;
-            }
-            
-            .nav-github {
-                font-size: 0.9rem;
-                padding: 6px 14px;
-            }
+
+        .nav-container {
+            padding: 12px 20px;
         }
-    </style>
+
+        .nav-logo-text {
+            font-size: 1.1rem;
+        }
+
+        .nav-logo-img {
+            height: 26px;
+        }
+
+        .nav-github {
+            font-size: 0.85rem;
+            padding: 6px 15px;
+        }
+
+        .studio-header {
+            margin-bottom: 40px;
+        }
+
+        .studio-header p {
+            font-size: 1rem;
+        }
+    }
+</style>
 </head>
 <body>
-
     <nav class="navbar">
         <div class="nav-container">
             <a href="/" class="nav-logo">
-                <img src="ceylonstudio.png" alt="Ceylon Studio" class="nav-logo-img">
-                </a>
+                <img src="ceylonstudio.png" alt="Ceylon Studio Logo" class="nav-logo-img">
+                <span class="nav-logo-text">Ceylon Studio</span>
+            </a>
             <a href="https://github.com/Moeshje/moeshje.github.io" class="nav-github" target="_blank">GitHub</a>
         </div>
     </nav>
-    
-    <div class="navbar">
-        <a href="/" class="back-btn">← Back</a>
-    </div>
-    
-    <div class="logo-container">
-        <img src="ceylonstudio.png" alt="Ceylon Studio Logo" class="site-logo">
-    </div>
     
     <div class="container">
         
@@ -351,6 +323,5 @@
 
         </div>
     </div>
-
 </body>
 </html>
