@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        html, body {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        html, body {
             width: 100%;
             height: 100%;
             background-image: url('starpaper_50.jpg');
@@ -16,34 +23,40 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
             position: relative;
         }
 
         .text-box {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 40px;
+            right: 40px;
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 2rem;
-            font-weight: 600;
-            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: right;
             letter-spacing: 1px;
             padding: 30px;
             background: rgba(0, 0, 0, 0.6);
             border-radius: 15px;
-            max-width: 80%;
+            max-width: 50%;
         }
 
         .space-btn {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            bottom: 40px;
+            left: 40px;
             display: inline-block;
-            padding: 12px 30px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 15px 35px;
             font-size: 1.1rem;
-            font-weight: 500;
+            font-weight: 600;
             color: #ffffff;
             text-decoration: none;
             background: rgba(255, 255, 255, 0.1);
@@ -62,41 +75,43 @@
         }
 
         @media (max-width: 768px) {
-            .container {
-                width: 100%;
-                padding: 10px 20px;
-                box-sizing: border-box;
-            }
-        
-            .main-grid, .features-layout {
-                display: flex;
+            body {
                 flex-direction: column;
-                gap: 20px;
+                justify-content: space-between;
+                padding: 40px 20px;
             }
-        
-            h1 {
-                font-size: 2.2rem !important;
+
+            .text-box {
+                position: relative;
+                top: auto;
+                right: auto;
+                max-width: 100%;
+                width: 100%;
+                font-size: 1.8rem;
                 text-align: center;
-                line-height: 1.2;
+                padding: 20px;
+                order: 1;
             }
-        
-            .btn-discover, .cta-button {
-                display: block;
+
+            .space-btn {
+                position: relative;
+                bottom: auto;
+                left: auto;
                 width: 100%;
                 text-align: center;
-                padding: 15px;
-                box-sizing: border-box;
+                margin-top: auto;
+                order: 2;
             }
         }
     </style>
 </head>
 <body>
 
-    <a href="/ceylonstudio" class="space-btn">Discover Ceylon Studio</a>
-
     <div class="text-box">
         Welcome to Star Systems
     </div>
+
+    <a href="/ceylonstudio" class="space-btn">Discover Ceylon Studio</a>
 
 </body>
 </html>
