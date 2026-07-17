@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,30 +82,68 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px 20px 60px 20px;
         }
 
-        .test-box {
+        .spec-section {
             background: rgba(10, 10, 10, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             padding: 30px;
+            margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .test-box h1 {
-            font-size: 2rem;
+        .spec-section h1 {
+            font-size: 2.2rem;
             color: #d29a74;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-        .test-box p {
-            font-size: 1.05rem;
+        .spec-section .intro-p {
+            font-size: 1.1rem;
             color: #cccccc;
             line-height: 1.6;
-            margin-bottom: 25px;
+        }
+
+        .spec-section h2 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(210, 154, 116, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .spec-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .spec-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .spec-table td {
+            padding: 14px 10px;
+            font-size: 0.95rem;
+            vertical-align: top;
+        }
+
+        .spec-table td:first-child {
+            font-weight: 700;
+            color: #d29a74;
+            width: 25%;
+        }
+
+        .spec-table td:last-child {
+            color: #e0e0e0;
+            line-height: 1.5;
         }
 
         .pinout-container {
@@ -113,8 +151,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px dashed rgba(210, 154, 116, 0.2);
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 20px;
         }
@@ -125,6 +163,27 @@
             display: block;
             border-radius: 4px;
         }
+
+        pre {
+            background: #0d0d0d;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 15px;
+        }
+
+        code {
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            color: #f8f8f2;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-keyword { color: #ff79c6; }
+        .code-string { color: #f1fa8c; }
+        .code-variable { color: #f8f8f2; }
+        .code-number { color: #bd93f9; }
 
         @media (max-width: 768px) {
             body {
@@ -140,11 +199,20 @@
                 font-size: 0.85rem;
                 padding: 6px 15px;
             }
-            .test-box {
+            .spec-section {
                 padding: 20px;
             }
-            .test-box h1 {
-                font-size: 1.6rem;
+            .spec-section h1 {
+                font-size: 1.8rem;
+            }
+            .spec-table td {
+                display: block;
+                width: 100% !important;
+                padding: 8px 0;
+            }
+            .spec-table tr {
+                padding: 8px 0;
+                display: block;
             }
             .pinout-container {
                 padding: 10px;
@@ -164,14 +232,60 @@
     </nav>
 
     <div class="container">
-        <div class="test-box">
+
+        <div class="spec-section">
             <h1>Seeed Studio XIAO ESP32-C6</h1>
-            <p>Dit is een test om te kijken hoe de specificaties en tekst straks op de pagina komen te staan. De box heeft dezelfde transparante donkere achtergrond en gouden accenten als de rest van de website, waardoor alles één mooi geheel vormt.</p>
-            
+            <p class="intro-p">A powerful, thumb-sized microcontroller designed for advanced wireless projects. Featuring integrated Wi-Fi 6, Bluetooth 5, and Matter protocols (Zigbee/Thread), it serves as the ideal platform for compact, ultra-low-power IoT applications powered by MicroPython.</p>
+        </div>
+
+        <div class="spec-section">
+            <h2>Technical Specifications</h2>
+            <table class="spec-table">
+                <tr>
+                    <td>Processor</td>
+                    <td>High-performance 32-bit RISC-V processor clocked up to 160 MHz, paired with a low-power 32-bit RISC-V coprocessor (20 MHz).</td>
+                </tr>
+                <tr>
+                    <td>Wireless</td>
+                    <td>2.4 GHz Wi-Fi 6 (802.11ax), Bluetooth 5.0 (LE), Zigbee 3.0, and Thread (802.15.4). Fully ready for Smart Home and Matter ecosystems.</td>
+                </tr>
+                <tr>
+                    <td>Memory</td>
+                    <td>512 KB onboard SRAM and equipped with 4 MB built-in Flash memory for scripts and storage.</td>
+                </tr>
+                <tr>
+                    <td>Interfaces</td>
+                    <td>11x digital GPIO pins (all PWM capable), 6x analog ADC pins. Supports I2C, UART, SPI, and I2S serial communication.</td>
+                </tr>
+                <tr>
+                    <td>Power &amp; Charging</td>
+                    <td>Powered via USB Type-C (5V). Features a built-in battery charging circuit with dedicated solder pads on the underside for LiPo batteries.</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>Extremely compact 'XIAO' form factor measuring just 21 mm x 17.5 mm. Perfect for wearables and small enclosures.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="spec-section">
+            <h2>Hardware Pinout Diagram</h2>
             <div class="pinout-container">
-                <img src="esp32c6-xiao-pinout.png" alt="XIAO ESP32-C6 Pinout" class="pinout-img">
+                <img src="JOUW-PINOUT-BESTANDSNAMEN.png" alt="XIAO ESP32-C6 Pinout Diagram" class="pinout-img">
             </div>
         </div>
+
+        <div class="spec-section">
+            <h2>Quick Start: Test Your MicroPython Access Point</h2>
+            <p class="intro-p">Run the following MicroPython script to immediately deploy your own local wireless Access Point. Once activated, you can search for the network on your phone or laptop and connect using the defined security credentials.</p>
+            
+            <pre><code><span class="code-keyword">import</span> network
+
+ap = network.WLAN(network.AP_IF)
+ap.active(<span class="code-keyword">True</span>)
+ap.config(ssid=<span class="code-string">"ESP32-C6 XIAO"</span>, password=<span class="code-string">"ceylonstudios"</span>, security=<span class="code-number">3</span>)</code></pre>
+        </div>
+
     </div>
 
 </body>
