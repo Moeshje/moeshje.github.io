@@ -265,9 +265,39 @@
                     <td>Dimensions</td>
                     <td>Extremely compact 'XIAO' form factor measuring just 21 mm x 17.5 mm. Perfect for wearables and small enclosures.</td>
                 </tr>
+                <tr>
+                    <td>Supported Languages</td>
+                    <td></td>
+                </tr>
             </table>
         </div>
 
+        <div class="spec-section">
+            <h2>Supported Programming Languages</h2>
+            <table class="spec-table">
+                <tr>
+                    <td>RISC-V Assembly</td>
+                    <td><strong>Bare-metal &amp; Low-level:</strong> Write native assembly code (.S) or inline assembly within C for maximum hardware control. Use any text editor paired with the GCC RISC-V toolchain / esptool.py (All OS).</td>
+                </tr>
+                <tr>
+                    <td>C / C++</td>
+                    <td><strong>Industry Standard:</strong> Full support for Espressif's official <strong>ESP-IDF</strong> framework or the beginner-friendly <strong>Arduino IDE</strong>. Available natively on Windows, Linux, and macOS.</td>
+                </tr>
+                <tr>
+                    <td>Rust</td>
+                    <td><strong>Safe Bare-metal:</strong> Excellent native RISC-V support. Program using <strong>VS Code</strong> combined with Cargo and the <code>espflash</code> utility (All OS).</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td><strong>MicroPython &amp; CircuitPython:</strong> Perfect for fast prototyping and scripting. Best managed using <strong>Thonny IDE</strong> on Windows, Linux, and macOS, or via VS Code with the Pymakr extension.</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td><strong>Web-Tech IoT:</strong> Deploy lightweight JavaScript applications using frameworks like Moddable or Espruino via <strong>VS Code</strong> and Node.js (All OS).</td>
+                </tr>
+            </table>
+        </div>
+        
         <div class="spec-section">
             <h2>Hardware Pinout Diagram</h2>
             <div class="pinout-container">
@@ -300,7 +330,7 @@
                 </table>
             </div>
             <h2>Quick Start: Test Your MicroPython Access Point</h2>
-            <p class="intro-p">Run the following MicroPython script to immediately deploy your own local wireless Access Point. Once activated, you can search for the network on your phone or laptop and connect using the defined security credentials.</p>
+            <p class="intro-p">Run the following MicroPython script to immediately deploy your own local Wi-Fi Access Point. Once activated, you can search for the network on your phone or laptop and connect using the defined security credentials.</p>
             
             <pre><code><span class="code-keyword">import</span> network
 
