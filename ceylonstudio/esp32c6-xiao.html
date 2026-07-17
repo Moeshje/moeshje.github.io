@@ -81,6 +81,32 @@
             box-shadow: 0 0 15px rgba(210, 154, 116, 0.4);
         }
 
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .test-box {
+            background: rgba(10, 10, 10, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .test-box h1 {
+            font-size: 2rem;
+            color: #d29a74;
+            margin-bottom: 15px;
+        }
+
+        .test-box p {
+            font-size: 1.05rem;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding-top: 85px !important;
@@ -95,6 +121,12 @@
                 font-size: 0.85rem;
                 padding: 6px 15px;
             }
+            .test-box {
+                padding: 20px;
+            }
+            .test-box h1 {
+                font-size: 1.6rem;
+            }
         }
     </style>
 </head>
@@ -102,12 +134,19 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="ceylonstudio.png" alt="Ceylon Studio Logo" class="nav-logo-img">
             </a>
             <a href="https://github.com/Moeshje/moeshje.github.io" class="nav-github" target="_blank">GitHub</a>
         </div>
     </nav>
+
+    <div class="container">
+        <div class="test-box">
+            <h1>Seeed Studio XIAO ESP32-C6</h1>
+            <p>Dit is een test om te kijken hoe the specificaties en tekst straks op de pagina komen te staan. De box heeft dezelfde transparante donkere achtergrond en gouden accenten als de rest van de website, waardoor alles één mooi geheel vormt.</p>
+        </div>
+    </div>
 
 </body>
 </html>
