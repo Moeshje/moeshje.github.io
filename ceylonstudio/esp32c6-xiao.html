@@ -276,6 +276,29 @@
         </div>
 
         <div class="spec-section">
+                <div class="spec-section">
+                <h2>Required Tools & Connection</h2>
+                <p class="intro-p" style="margin-bottom: 20px;">Before flashing the code, make sure you have the right environment set up on your computer:</p>
+                
+                <table class="spec-table" style="margin-bottom: 20px;">
+                    <tr>
+                        <td>IDE (Software)</td>
+                        <td>We highly recommend <strong>Thonny IDE</strong>. It is beginner-friendly and works out of the box on all platforms.</td>
+                    </tr>
+                    <tr>
+                        <td>Linux Installation</td>
+                        <td>Install via your package manager (e.g., <code>sudo apt install thonny</code>) or the official installer script. Ensure your user belongs to the <code>dialout</code> group for USB permissions.</td>
+                    </tr>
+                    <tr>
+                        <td>Windows & macOS</td>
+                        <td>Simply download and run the official installer from <a href="https://thonny.org" target="_blank" style="color: #d29a74; text-decoration: underline;">thonny.org</a>. Drivers are usually handled automatically.</td>
+                    </tr>
+                    <tr>
+                        <td>Hardware Connection</td>
+                        <td>Connect your XIAO ESP32-C6 to your computer using a <strong>USB Type-C data cable</strong> (ensure it's not a charge-only cable). In Thonny, go to <em>Tools &gt; Options &gt; Interpreter</em>, select <strong>MicroPython (ESP32)</strong>, and choose your board's COM/USB port.</td>
+                    </tr>
+                </table>
+            </div>
             <h2>Quick Start: Test Your MicroPython Access Point</h2>
             <p class="intro-p">Run the following MicroPython script to immediately deploy your own local wireless Access Point. Once activated, you can search for the network on your phone or laptop and connect using the defined security credentials.</p>
             
