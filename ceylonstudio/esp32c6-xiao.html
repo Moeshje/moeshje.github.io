@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XIAO ESP32-C6 Specs - Ceylon Studio</title>
+    
+    <link rel="icon" type="image/x-icon" href="ceylonstudio-favicon.ico">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100%;
+            background-image: url('pexels-pixabay-301669.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+        }
+
+        body {
+            padding-top: 100px !important;
+        }
+
+        .navbar {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+        }
+
+        .nav-container {
+            width: 100%;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-logo-img {
+            height: 32px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-github {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-github:hover {
+            background: #d29a74;
+            color: #000000;
+            border-color: #d29a74;
+            box-shadow: 0 0 15px rgba(210, 154, 116, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 85px !important;
+            }
+            .nav-container {
+                padding: 12px 20px;
+            }
+            .nav-logo-img {
+                height: 26px;
+            }
+            .nav-github {
+                font-size: 0.85rem;
+                padding: 6px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="ceylonstudio.png" alt="Ceylon Studio Logo" class="nav-logo-img">
+            </a>
+            <a href="https://github.com/Moeshje/moeshje.github.io" class="nav-github" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+</body>
+</html>
