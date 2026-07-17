@@ -105,6 +105,25 @@
             font-size: 1.05rem;
             color: #cccccc;
             line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .pinout-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(210, 154, 116, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .pinout-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
         }
 
         @media (max-width: 768px) {
@@ -127,6 +146,9 @@
             .test-box h1 {
                 font-size: 1.6rem;
             }
+            .pinout-container {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -144,7 +166,11 @@
     <div class="container">
         <div class="test-box">
             <h1>Seeed Studio XIAO ESP32-C6</h1>
-            <p>Dit is een test om te kijken hoe the specificaties en tekst straks op de pagina komen te staan. De box heeft dezelfde transparante donkere achtergrond en gouden accenten als de rest van de website, waardoor alles één mooi geheel vormt.</p>
+            <p>Dit is een test om te kijken hoe de specificaties en tekst straks op de pagina komen te staan. De box heeft dezelfde transparante donkere achtergrond en gouden accenten als de rest van de website, waardoor alles één mooi geheel vormt.</p>
+            
+            <div class="pinout-container">
+                <img src="esp32c6-xiao-pinout.png" alt="XIAO ESP32-C6 Pinout" class="pinout-img">
+            </div>
         </div>
     </div>
 
