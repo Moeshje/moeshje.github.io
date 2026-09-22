@@ -53,6 +53,65 @@
         .top-bar a.nav-link:hover {
           text-decoration: underline;
         }
+
+        .mcu-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          padding: 40px 20px;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+        
+        .mcu-card {
+          background-color: rgba(0, 0, 0, 0.75);
+          border: 1px solid var(--accent-color);
+          border-radius: 8px;
+          padding: 20px;
+          width: 320px;
+          color: var(--accent-color);
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+        
+        .mcu-img-placeholder {
+          width: 100%;
+          height: 180px;
+          border: 2px dashed var(--accent-color);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--accent-color);
+          font-size: 14px;
+          opacity: 0.7;
+        }
+        
+        .mcu-img-placeholder img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+        
+        .mcu-title {
+          font-size: 20px;
+          font-weight: bold;
+          margin: 0;
+        }
+        
+        .mcu-specs-list {
+          list-style: none;
+          padding-left: 0;
+          margin: 0;
+        }
+        
+        .mcu-specs-list li {
+          margin-bottom: 6px;
+          font-size: 14px;
+          line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -63,5 +122,26 @@
         </a>
         <a href="mcus/" class="nav-link">MCU's</a>
     </header>
+    <main class="mcu-container">
+
+  <div class="mcu-card">
+    
+    <div class="mcu-img-placeholder">
+      <span>[ Image Placeholder ]</span>
+    </div>
+
+    <h2 class="mcu-title">Seeed Studio XIAO ESP32-C6</h2>
+
+    <ul class="mcu-specs-list">
+      <li>- Architecture: RISC-V 32-bit single-core</li>
+      <li>- Clock Speed: Up to 160 MHz</li>
+      <li>- Wireless: Wi-Fi 6, Bluetooth 5 (LE), Zigbee, Thread</li>
+      <li>- SRAM: 512 KB</li>
+      <li>- Flash Memory: 4 MB</li>
+      <li>- Interface: USB Type-C</li>
+    </ul>
+
+  </div>
+</main>
 </body>
 </html>
