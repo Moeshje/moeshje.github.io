@@ -54,6 +54,17 @@
         .top-bar a.nav-link:hover {
           text-decoration: underline;
         }
+        .separator-fade {
+          width: 1px;
+          height: 28px;
+          background: linear-gradient(
+            to bottom,
+            transparent,
+            var(--accent-color),
+            transparent
+          );
+          opacity: 0.5;
+        }
     </style>
 </head>
 <body>
@@ -62,6 +73,7 @@
         <a href="https://starsystems.tech" class="logo-btn">
             <img src="starnobg.png" alt="Star Systems Logo">
         </a>
+        <div class="separator"></div>
         <a href="mcus/" class="nav-link">MCU's</a>
     </header>
 
