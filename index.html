@@ -65,8 +65,53 @@
             );
             opacity: 0.8;
         }
+            footer {
+        margin-top: auto; /* Keeps footer pushed below page content */
+        background-color: #121212; /* Dark gray blending into black */
+        border-top: 1px solid #222222;
+        padding: 30px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        font-size: 14px;
+    }
+    
+    .footer-links {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+        color: var(--accent-color);
+        text-decoration: none;
+        opacity: 0.8;
+    }
+    
+    .footer-links a:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
+    
+    .footer-contact {
+        color: var(--accent-color);
+        opacity: 0.8;
+    }
     </style>
 </head>
+<footer>
+    <div class="footer-links">
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Dev.to</a>
+        <a href="#" target="_blank">TikTok</a>
+        <a href="#" target="_blank">Etsy</a>
+    </div>
+    <div class="footer-contact">
+        Contact: <span>your-email@example.com</span>
+    </div>
+</footer>
 <body>
 <header class="top-bar">
     <a href="https://starsystems.tech" class="logo-btn">
