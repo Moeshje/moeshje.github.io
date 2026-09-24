@@ -125,6 +125,24 @@
                 font-size: 30px;
             }
         }
+        
+        .hero-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background-color: var(--accent-color);
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 9999px; /* Creates the semicircle pill ends */
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        
+        .hero-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -147,6 +165,7 @@
     <main>
     <section class="hero">
         <h1>Presoldered MCU kits. No extras, no leftovers, just enough.</h1>
+        <a href="mcus/" class="hero-btn">Our microcontrollers</a>
     </section>
     </main>
     <footer>
