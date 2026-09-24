@@ -143,6 +143,86 @@
             opacity: 0.9;
             transform: translateY(-2px);
         }
+        .suggestion-section {
+            max-width: 600px;
+            margin: 40px auto 80px;
+            padding: 30px;
+            background-color: #121212;
+            border: 1px solid var(--accent-color);
+            border-radius: 12px;
+        }
+        
+        .suggestion-section h2 {
+            color: var(--accent-color);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .suggestion-section p {
+            color: var(--accent-color);
+            opacity: 0.8;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        
+        .suggestion-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            color: var(--accent-color);
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            background-color: #000000;
+            border: 1px solid var(--accent-color);
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+        
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            box-shadow: 0 0 5px var(--accent-color);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .submit-btn {
+            align-self: flex-start;
+            padding: 10px 24px;
+            background-color: var(--accent-color);
+            color: #000000;
+            border: none;
+            border-radius: 9999px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -166,6 +246,24 @@
     <section class="hero">
         <h1>Presoldered MCU kits. No extras, no leftovers, just enough.</h1>
         <a href="mcus/" class="hero-btn">Our microcontrollers</a>
+    </section>
+    <section class="suggestion-section">
+    <h2>Suggest a Future MCU Kit</h2>
+    <p>Have an MCU or development board you'd like to see presoldered in our store? Let us know!</p>
+
+    <form class="suggestion-form" action="https://formspree.io/f/mnpnzzgq" method="POST">
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="suggestion">Your Suggestion</label>
+            <textarea id="suggestion" name="suggestion" placeholder="Tell us which MCU kit or accessories you want..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Suggestion</button>
+    </form>
     </section>
     </main>
     <footer>
